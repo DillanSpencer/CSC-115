@@ -1,13 +1,14 @@
 package com.quad.binarytree;
 
 public class Node {
-	private Node left;
-	private Node right;
+	public Node left;
+	public Node right;
 	private int value;
 	private String key;
 	
 	public Node(String key, int val) {
 		value = val;
+		this.key = key;
 	}
 	
 	public Node getLeft() {

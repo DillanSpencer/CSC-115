@@ -61,9 +61,11 @@ public class MainApp {
 		
 		//binary tree
 		BinaryTree tree = new BinaryTree();
-		BinaryTreeUtils.generateTree(tree, 10);
+		BinaryTreeUtils.generateTree(tree,15);
 		System.out.println("Tree height: " + tree.getHeight());
-		
+		System.out.println("Is the tree full: " + tree.isFull());
+		System.out.println("Greatest value in tree: " + tree.findGreatestValue());
+		tree.printTree(BinaryTree.LEVELORDER);
 	}
 
 }
