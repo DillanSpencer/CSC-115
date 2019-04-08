@@ -10,10 +10,12 @@ public class BinaryTree {
 	
 	private Node root;
 	
+	//inserts a node in tree
 	public void insert(String key, int val) {
 		root = insert(root, key, val);
 	}
 	
+	//recursive insert
 	private Node insert(Node node, String key, int val) {
 		if(node == null) return new Node(key, val);
 		
@@ -28,15 +30,18 @@ public class BinaryTree {
 		return node;
 	}
 	
+	//returns the height of the tree
 	public int getHeight() {
 		return height(root);
 	}
 	
+	//recursive height
 	private int height(Node node) {
 		if(node == null) return 0;
 		return 1+Math.max(height(node.getLeft()), height(node.getRight()));
 	}
 	
+	//returns number of nodes in the tree
 	public int countNodes(Node root)  
     { 
         if (root == null) 
@@ -44,6 +49,7 @@ public class BinaryTree {
         return (1 + countNodes(root.left) + countNodes(root.right)); 
     } 
 	
+	//checks if tree is full
 	public boolean isFull() {
 		return isFull(root, 0, countNodes(root));
 	}
@@ -132,6 +138,7 @@ public class BinaryTree {
     	System.out.print(node.getKey()+":"+node.getValue()+" ");
     }
     
+    //prints level order
     private void printLevelOrder() {
     	int h = getHeight();
     	for(int i = 1; i < h; i++) {
@@ -139,6 +146,7 @@ public class BinaryTree {
     	}
     }
     
+    //prints a certain level in the tree
     private void printLevelAt(Node root, int level) {
     	 if (root == null) 
              return; 
@@ -151,4 +159,14 @@ public class BinaryTree {
          } 
     }
     
+    /*
+     * GETTERS AND SETTERS
+     */
+    public Node getRoot() {
+		return root;
+	}
+
+	public void setRoot(Node root) {
+		this.root = root;
+	}
 }
