@@ -3,14 +3,16 @@ package com.quad.binarytree;
 public class BinarySearchTree {
 	
 	private BinaryTree tree;
-	private Node root = tree.getRoot();
+	private Node root;
 	
 	public BinarySearchTree() {
 		tree = new BinaryTree();
+		root = null;
 	}
 	
 	public BinarySearchTree(BinaryTree tree) {
 		this.tree = tree;
+		root = tree.getRoot();
 	}
 	
 	public int findValue(String key) {

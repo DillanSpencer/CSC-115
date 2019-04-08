@@ -114,7 +114,7 @@ public class BinaryTree {
     		printLevelOrder();
     		break;
     	}
-    	System.out.print("}");
+    	System.out.println("}");
     }
     
     private void printInOrder(Node node) {
